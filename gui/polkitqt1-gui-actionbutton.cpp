@@ -163,4 +163,4 @@ void ActionButtonPrivate::streamClicked(bool c)
 
 }
 
-
+#include "moc_polkitqt1-gui-actionbutton.cpp"
