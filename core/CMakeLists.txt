@@ -1,8 +1,3 @@
-include_directories(
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
 set(polkit_qt_core_SRCS
     polkitqt1-authority.cpp
     polkitqt1-identity.cpp
@@ -14,10 +9,9 @@ set(polkit_qt_core_SRCS
 
 add_library(polkit-qt-core-1 SHARED ${polkit_qt_core_SRCS})
 
+qt5_use_modules(polkit-qt-core-1 Core DBus Xml)
+
 target_link_libraries(polkit-qt-core-1
-    ${QT_QTCORE_LIBRARY}
-    ${QT_QTDBUS_LIBRARY}
-    ${QT_QTXML_LIBRARY}
     ${POLKIT_LIBRARIES}
     ${GLIB2_LIBRARIES}
     ${GOBJECT_LIBRARIES}

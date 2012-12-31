@@ -1,18 +1,19 @@
 ## Polkit Qt Library
 project("PolkitQt-1")
 
-cmake_minimum_required(VERSION 2.8.10.1)
+cmake_minimum_required(VERSION 2.8.9)
+
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # Instruct CMake to run moc automatically when needed
 set(CMAKE_AUTOMOC ON)
 
-find_package(ECM 0.0.6 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${CMAKE_MODULE_PATH})
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
-
-set(QT_MIN_VERSION "5.0.0")
-
-find_package(Qt5Transitional REQUIRED Core Gui DBus)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 find_package(Polkit REQUIRED)
 find_package(GObject REQUIRED)
 find_package(GIO REQUIRED)
@@ -25,7 +26,6 @@ include (MacroWriteBasicCMakeVersionFile)
 include (CheckFunctionExists)
 
 include_directories(
-    ${CMAKE_CURRENT_BINARY_DIR}
     ${POLKIT_INCLUDE_DIR}
     ${POLKIT_AGENT_INCLUDE_DIR}
     ${GLIB2_INCLUDE_DIR}
@@ -34,7 +34,6 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/core
     ${CMAKE_CURRENT_SOURCE_DIR}/includes
-    ${QT_QTXML_INCLUDE_DIR}
 )
 
 # Check for older polkit
