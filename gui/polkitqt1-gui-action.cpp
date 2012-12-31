@@ -512,4 +512,4 @@ QString Action::actionId() const
 
 }
 
-
+#include "moc_polkitqt1-gui-action.cpp"

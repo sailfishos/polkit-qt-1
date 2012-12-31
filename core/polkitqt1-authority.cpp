@@ -852,4 +852,4 @@ void Authority::revokeTemporaryAuthorizationCancel()
 
 }
 
-
+#include "moc_polkitqt1-authority.cpp"
