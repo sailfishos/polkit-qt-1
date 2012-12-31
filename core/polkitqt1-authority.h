@@ -32,6 +32,7 @@
 
 #include <QtCore/QObject>
 #include <QtCore/QMetaType>
+#include <QtDBus/QDBusMessage>
 
 typedef struct _PolkitAuthority PolkitAuthority;
 class QStringList;

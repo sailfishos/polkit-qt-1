@@ -12,7 +12,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_P
 
 set(QT_MIN_VERSION "5.0.0")
 
-find_package(Qt5Transitional REQUIRED)
+find_package(Qt5Transitional REQUIRED Core Gui DBus)
 find_package(Polkit REQUIRED)
 find_package(GObject REQUIRED)
 find_package(GIO REQUIRED)
