@@ -1,8 +1,3 @@
-include_directories(
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
 set(polkit_qt_gui_SRCS
     polkitqt1-gui-action.cpp
     polkitqt1-gui-actionbutton.cpp
@@ -11,10 +6,9 @@ set(polkit_qt_gui_SRCS
 
 add_library(polkit-qt-gui-1 SHARED ${polkit_qt_gui_SRCS})
 
+qt5_use_modules(polkit-qt-gui-1 Core DBus Gui Widgets)
+
 target_link_libraries(polkit-qt-gui-1
-    ${QT_QTCORE_LIBRARY}
-    ${QT_QTGUI_LIBRARY}
-    ${QT_QTDBUS_LIBRARY}
     ${POLKIT_LIBRARIES}
     polkit-qt-core-1
 )
