@@ -1,7 +1,8 @@
 ## Polkit Qt Library
 project("PolkitQt-1")
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 2.8.10.1)
+find_package(ECM 0.0.6 REQUIRED NO_MODULE)
 
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -9,7 +10,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Instruct CMake to run moc automatically when needed
 set(CMAKE_AUTOMOC ON)
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
 
 find_package(Qt5Core REQUIRED)
 find_package(Qt5DBus REQUIRED)
