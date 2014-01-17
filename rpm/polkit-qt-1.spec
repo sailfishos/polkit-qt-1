@@ -29,11 +29,16 @@ Url:            https://github.com/hawaii-desktop/polkit-qt-1
 Group:          Development/Libraries/KDE
 Source0:        %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5DBus)
+BuildRequires:  pkgconfig(Qt5Xml)
+BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  cmake
 BuildRequires:  calligra-extra-cmake-modules
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(polkit-backend-1)
 BuildRequires:  pkgconfig(polkit-agent-1)
+BuildRequires:  pkgconfig(gobject-2.0)
+BuildRequires:  pkgconfig(gio-2.0)
 
 %description
 Polkit-qt-1 aims to make it easy for Qt developers to take advantage of
