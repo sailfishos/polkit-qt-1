@@ -93,13 +93,13 @@ make
 %doc AUTHORS README
 %{_includedir}/polkit-qt-1/
 %{_libdir}/pkgconfig/polkit-qt*
-%{_libdir}/libpolkit-qt-gui-1.so
+#%{_libdir}/libpolkit-qt-gui-1.so
 %{_libdir}/libpolkit-qt-core-1.so
 %{_libdir}/libpolkit-qt-agent-1.so
 %{_libdir}/cmake/PolkitQt-1/
 
 %files -n libpolkit-qt-1-1
 %defattr(-,root,root)
-%{_libdir}/libpolkit-qt-gui-1.so.*
+#%{_libdir}/libpolkit-qt-gui-1.so.*
 %{_libdir}/libpolkit-qt-core-1.so.*
 %{_libdir}/libpolkit-qt-agent-1.so.*

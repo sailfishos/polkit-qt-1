@@ -16,7 +16,7 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5DBus REQUIRED)
 find_package(Qt5Xml REQUIRED)
 find_package(Qt5Gui REQUIRED)
-find_package(Qt5Widgets REQUIRED)
+#find_package(Qt5Widgets REQUIRED)
 find_package(Polkit REQUIRED)
 find_package(GObject REQUIRED)
 find_package(GIO REQUIRED)
@@ -68,9 +68,9 @@ set(POLKITQT-1_LIBRARY_VERSION "${POLKITQT-1_ABI_VERSION}.${POLKITQT-1_VERSION_M
 configure_file(polkitqt1-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/polkitqt1-version.h)
 
 install(FILES
-    gui/polkitqt1-gui-action.h
-    gui/polkitqt1-gui-actionbutton.h
-    gui/polkitqt1-gui-actionbuttons.h
+    #gui/polkitqt1-gui-action.h
+    #gui/polkitqt1-gui-actionbutton.h
+    #gui/polkitqt1-gui-actionbuttons.h
 
     core/polkitqt1-authority.h
     core/polkitqt1-details.h
@@ -98,12 +98,12 @@ install(FILES
     DESTINATION
     ${INCLUDE_INSTALL_DIR}/polkit-qt-1/PolkitQt1 COMPONENT Devel)
 
-install(FILES
-    includes/PolkitQt1/Gui/Action
-    includes/PolkitQt1/Gui/ActionButton
-    includes/PolkitQt1/Gui/ActionButtons
-    DESTINATION
-    ${INCLUDE_INSTALL_DIR}/polkit-qt-1/PolkitQt1/Gui COMPONENT Devel)
+#install(FILES
+#    includes/PolkitQt1/Gui/Action
+#    includes/PolkitQt1/Gui/ActionButton
+#    includes/PolkitQt1/Gui/ActionButtons
+#    DESTINATION
+#    ${INCLUDE_INSTALL_DIR}/polkit-qt-1/PolkitQt1/Gui COMPONENT Devel)
 
 install(FILES
     includes/PolkitQt1/Agent/Listener
@@ -118,8 +118,8 @@ if(NOT WIN32)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/polkit-qt-core-1.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-core-1.pc
                    @ONLY)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-core-1.pc DESTINATION ${LIB_INSTALL_DIR}/pkgconfig )
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/polkit-qt-gui-1.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-gui-1.pc @ONLY)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-gui-1.pc DESTINATION ${LIB_INSTALL_DIR}/pkgconfig )
+    #configure_file(${CMAKE_CURRENT_SOURCE_DIR}/polkit-qt-gui-1.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-gui-1.pc @ONLY)
+    #install(FILES ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-gui-1.pc DESTINATION ${LIB_INSTALL_DIR}/pkgconfig )
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/polkit-qt-agent-1.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-agent-1.pc
                    @ONLY)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/polkit-qt-agent-1.pc DESTINATION ${LIB_INSTALL_DIR}/pkgconfig )
@@ -155,7 +155,7 @@ if (BUILD_TEST)
 endif (BUILD_TEST)
 
 add_subdirectory(core)
-add_subdirectory(gui)
+#add_subdirectory(gui)
 add_subdirectory(agent)
 
 # Always last!
