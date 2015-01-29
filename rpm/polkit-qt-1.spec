@@ -35,7 +35,6 @@ BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  cmake
 BuildRequires:  calligra-extra-cmake-modules
 BuildRequires:  pkgconfig(polkit-gobject-1)
-BuildRequires:  pkgconfig(polkit-backend-1)
 BuildRequires:  pkgconfig(polkit-agent-1)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(gio-2.0)
