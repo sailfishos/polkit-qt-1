@@ -23,7 +23,7 @@
 Name:           polkit-qt-1
 Version:        0.99.1
 Release:        14
-License:        LGPL-2.1+
+License:        LGPLv2+
 Summary:        PolicyKit Library Qt Bindings
 Url:            https://github.com/hawaii-desktop/polkit-qt-1
 Source0:        %{name}-%{version}.tar.bz2
