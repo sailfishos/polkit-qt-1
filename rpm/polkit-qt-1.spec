@@ -26,7 +26,6 @@ Release:        14
 License:        LGPL-2.1+
 Summary:        PolicyKit Library Qt Bindings
 Url:            https://github.com/hawaii-desktop/polkit-qt-1
-Group:          Development/Libraries/KDE
 Source0:        %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5DBus)
@@ -48,7 +47,6 @@ with PolicyKit.
 %package -n libpolkit-qt-1-1
 License:        LGPL-2.1+
 Summary:        PolicyKit Library Qt Bindings
-Group:          Development/Libraries/KDE
 Provides:       libpolkit-qt0 = 0.9.3
 Obsoletes:      libpolkit-qt0 < 0.9.3
 
@@ -61,7 +59,6 @@ with PolicyKit.
 %package -n libpolkit-qt-1-devel
 License:        LGPL-2.1+
 Summary:        PolicyKit Library Qt Bindings
-Group:          Development/Libraries/KDE
 Requires:       libpolkit-qt-1-1 = %{version}
 Requires:       polkit-devel
 Provides:       libpolkit-qt-devel = 0.9.3
